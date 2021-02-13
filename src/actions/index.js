@@ -18,10 +18,8 @@ export const fetchPosts = () => async dispatch => {
 // };
 
 
-
+//with _.memoize can't update data (data always will be loaded form cash)
 export const fetchUser = id => dispatch => _fetchUser(id, dispatch);
-
-
 
 const _fetchUser = _.memoize(async (id, dispatch) => {
 
